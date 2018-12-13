@@ -1,6 +1,6 @@
-import * as XmlCore from "xml-core";
-import { XmlAttribute, XmlChildElement, XmlElement, XmlObject } from "xml-core";
-import { XmlNumberConverter } from "xml-core";
+import * as XmlCore from "@inqool/xml-core";
+import { XmlAttribute, XmlChildElement, XmlElement, XmlObject } from "@inqool/xml-core";
+import { XmlNumberConverter } from "@inqool/xml-core";
 
 import { PssAlgorithmParams } from "./key_infos";
 import { XmlSignature } from "./xml_names";

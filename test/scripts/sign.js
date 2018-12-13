@@ -4,8 +4,7 @@ if (typeof module !== "undefined" && typeof exports !== "undefined") {
     const assert = require("assert");
     const child_process = require("child_process");
     const WebCrypto = require("node-webcrypto-ossl");
-    const { XMLSerializer } = require("xmldom-alpha");
-
+    
     const xmldsig = require("../../");
 
     const SIGN_XML_FILE = "sign.xml";
@@ -76,7 +75,7 @@ if (typeof module !== "undefined" && typeof exports !== "undefined") {
                     xmlDocument.documentElement.appendChild(signature.GetXml());
 
                     // serialize XML
-                    const oSerializer = new XMLSerializer();
+                    const oSerializer = xmldsig.getSerializer();
                     const sXML = oSerializer.serializeToString(xmlDocument);
 
                     await checkXMLSEC(sXML);

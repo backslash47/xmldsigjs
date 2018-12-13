@@ -3,7 +3,7 @@ import {
     XmlAttribute, XmlBase64Converter, XmlChildElement,
     XmlElement, XmlError, XmlNumberConverter,
     XmlObject,
-} from "xml-core";
+} from "@inqool/xml-core";
 
 import { RSA_PKCS1, RSA_PSS, SHA1, SHA256, SHA384, SHA512 } from "../../algorithm/index";
 import { Application } from "../../application";

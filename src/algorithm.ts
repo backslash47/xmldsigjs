@@ -1,4 +1,4 @@
-import { Convert } from "xml-core";
+import { Convert, getSerializer } from "@inqool/xml-core";
 import { Application } from "./application";
 
 export type BASE64 = string;
@@ -41,7 +41,7 @@ export abstract class HashAlgorithm extends XmlAlgorithm implements IHashAlgorit
                     buf = xml;
                 } else {
                     // enveloped signature transform
-                    const txt = new XMLSerializer().serializeToString(xml);
+                    const txt = getSerializer().serializeToString(xml);
                     buf = Convert.FromString(txt, "utf8");
                 }
                 return Application.crypto.subtle.digest(this.algorithm, buf as ArrayBuffer);

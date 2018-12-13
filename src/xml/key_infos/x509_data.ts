@@ -1,6 +1,6 @@
-import { XE, XmlError } from "xml-core";
-import { Convert } from "xml-core";
-import { XmlChildElement, XmlElement } from "xml-core";
+import { XE, XmlError } from "@inqool/xml-core";
+import { Convert } from "@inqool/xml-core";
+import { XmlChildElement, XmlElement } from "@inqool/xml-core";
 
 import { X509Certificate } from "../../pki";
 import { XmlSignature } from "../xml_names";

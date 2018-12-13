@@ -1,4 +1,4 @@
-import { Select, XE, XmlError } from "xml-core";
+import { Select, XE, XmlError } from "@inqool/xml-core";
 
 import { Transform } from "../transform";
 

@@ -1,5 +1,5 @@
-import { XmlAttribute, XmlChildElement, XmlElement } from "xml-core";
-import { XmlBase64Converter } from "xml-core";
+import { XmlAttribute, XmlChildElement, XmlElement } from "@inqool/xml-core";
+import { XmlBase64Converter } from "@inqool/xml-core";
 
 import { DataObjects } from "./data_object";
 import { KeyInfo } from "./key_info";

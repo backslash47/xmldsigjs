@@ -1,4 +1,4 @@
-import * as XmlCore from "xml-core";
+import * as XmlCore from "@inqool/xml-core";
 
 export enum XmlCanonicalizerState {
     BeforeDocElement,

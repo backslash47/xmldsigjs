@@ -1,5 +1,5 @@
-import { XE, XmlError } from "xml-core";
-import { XmlAttribute, XmlChildElement, XmlElement } from "xml-core";
+import { XE, XmlError } from "@inqool/xml-core";
+import { XmlAttribute, XmlChildElement, XmlElement } from "@inqool/xml-core";
 
 import { XmlSignature } from "./xml_names";
 import { XmlSignatureObject } from "./xml_object";

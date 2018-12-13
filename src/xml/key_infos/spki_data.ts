@@ -1,5 +1,5 @@
-import { XmlChildElement, XmlElement } from "xml-core";
-import { XmlBase64Converter } from "xml-core";
+import { XmlChildElement, XmlElement } from "@inqool/xml-core";
+import { XmlBase64Converter } from "@inqool/xml-core";
 
 import { Application } from "../../application";
 import { XmlSignature } from "../xml_names";

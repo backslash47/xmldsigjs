@@ -1,11 +1,10 @@
 "use strict";
-var select, xmldsig, DOMParser, readXml, assert;
+var select, xmldsig, readXml, assert;
 
 if (typeof module !== "undefined") {
     var config = require("../config");
     var select = config.select;
     var xmldsig = config.xmldsig;
-    var DOMParser = config.DOMParser;
     var assert = config.assert;
     var readXml = config;
 }
@@ -42,7 +41,7 @@ describe("Canonicalization", function () {
 
     function canon(exclusive, xml, xpath, result, comment, inclusive) {
         comment = !!comment;
-        var doc = new DOMParser().parseFromString(xml, "application/xml")
+        var doc = xmldsig.getParser().parseFromString(xml, "application/xml")
         var elem = xmldsig.Select(doc, xpath)[0]
         var xmlCanonicalizer = new xmldsig.XmlCanonicalizer(!!comment, exclusive);
         if (inclusive)

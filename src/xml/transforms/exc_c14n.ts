@@ -1,4 +1,4 @@
-import { XE, XmlError } from "xml-core";
+import { XE, XmlError } from "@inqool/xml-core";
 
 import { XmlCanonicalizer } from "../../canonicalizer";
 import { Transform } from "../transform";

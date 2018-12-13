@@ -3,7 +3,7 @@ var select, xmldsig, DOMParser, XMLSerializer, readXml, assert, XmlCore;
 
 if (typeof module !== "undefined") {
     var config = require("../config");
-    var xmljs = require("xml-core");
+    var xmljs = require("@inqool/xml-core");
     select = config.select;
     xmldsig = config.xmldsig;
     DOMParser = config.DOMParser;

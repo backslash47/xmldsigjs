@@ -1,4 +1,4 @@
-import { XmlCollection, XmlObject } from "xml-core";
+import { XmlCollection, XmlObject } from "@inqool/xml-core";
 
 declare namespace XmlDSigJs {
 

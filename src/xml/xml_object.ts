@@ -1,5 +1,5 @@
-import { XmlCollection, XmlObject } from "xml-core";
-import { XmlElement } from "xml-core";
+import { XmlCollection, XmlObject } from "@inqool/xml-core";
+import { XmlElement } from "@inqool/xml-core";
 
 import { XmlSignature } from "./xml_names";
 

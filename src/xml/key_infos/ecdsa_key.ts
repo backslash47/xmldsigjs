@@ -1,6 +1,6 @@
-import { XE, XmlError } from "xml-core";
-import { Convert, XmlBase64Converter } from "xml-core";
-import { XmlAttribute, XmlChildElement, XmlElement, XmlObject } from "xml-core";
+import { XE, XmlError } from "@inqool/xml-core";
+import { Convert, XmlBase64Converter } from "@inqool/xml-core";
+import { XmlAttribute, XmlChildElement, XmlElement, XmlObject } from "@inqool/xml-core";
 
 import { Application } from "../../application";
 import { XmlSignature } from "../index";

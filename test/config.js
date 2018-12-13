@@ -2,12 +2,19 @@ console.warn("Runing: NodeJS");
 
 var fs = require("fs");
 var assert = require("assert");
-var select = require("xpath.js");
+var select = require("xpath-ts");
 require("babel-polyfill");
-var DOMParser = require("xmldom-alpha").DOMParser;
-var XMLSerializer = require("xmldom-alpha").XMLSerializer;
-var XmlCore = require("xml-core");
+var DOMParser = require("xmldom").DOMParser;
+var XMLSerializer = require("xmldom").XMLSerializer;
+var XPathEvaluator = require("xpath-ts").XPathEvaluator;
+var XmlCore = require("@inqool/xml-core");
 xmldsig = require("../");
+var JSDOM = require('jsdom').JSDOM;
+
+
+// xmldsig.install(new DOMParser(), new XMLSerializer(), new XPathEvaluator({}));
+const jsdom = new JSDOM();
+xmldsig.install(new jsdom.window.DOMParser(), new jsdom.window.XMLSerializer(), new XPathEvaluator({}));
 
 var WebCrypto = require("node-webcrypto-ossl");
 xmldsig.Application.setEngine("OpenSSL", new WebCrypto());
@@ -27,8 +34,6 @@ var readXml = function(path, cb) {
 module.exports = {
     select: select,
     xmldsig: xmldsig,
-    DOMParser: DOMParser,
-    XMLSerializer: XMLSerializer,
     readXml: readXml,
     assert: assert,
     XmlCore: XmlCore,

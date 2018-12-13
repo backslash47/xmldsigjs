@@ -1,12 +1,10 @@
 "use strict"
-var select, xmldsig, DOMParser, XMLSerializer, readXml, assert;
+var select, xmldsig, readXml, assert;
 
 if (typeof module !== "undefined") {
     var config = require("../config");
     select = config.select;
     xmldsig = config.xmldsig;
-    DOMParser = config.DOMParser;
-    XMLSerializer = config.XMLSerializer;
     assert = config.assert;
     readXml = config.readXml;
 }
@@ -164,7 +162,7 @@ describe("Transforms", () => {
 
             let out = transform.GetOutput();
 
-            assert.equal(new XMLSerializer().serializeToString(out), "<root/>");
+            assert.equal(xmldsig.getSerializer().serializeToString(out), "<root/>");
         });
 
         it("GetOutput without signature", () => {
@@ -175,7 +173,7 @@ describe("Transforms", () => {
 
             let out = transform.GetOutput();
 
-            assert.equal(new XMLSerializer().serializeToString(out), "<root/>");
+            assert.equal(xmldsig.getSerializer().serializeToString(out), "<root/>");
         });
 
     })

@@ -1,5 +1,5 @@
-import * as XmlCore from "xml-core";
-import { XE, XmlElement, XmlError } from "xml-core";
+import * as XmlCore from "@inqool/xml-core";
+import { XE, XmlElement, XmlError } from "@inqool/xml-core";
 
 import { ECDSA, RSA_PKCS1, RSA_PSS } from "../../algorithm/index";
 import { XmlSignature } from "../xml_names";

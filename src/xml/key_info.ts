@@ -1,5 +1,5 @@
-import { XE, XmlError, XmlNodeType } from "xml-core";
-import { XmlAttribute, XmlElement } from "xml-core";
+import { XE, XmlError, XmlNodeType } from "@inqool/xml-core";
+import { XmlAttribute, XmlElement } from "@inqool/xml-core";
 
 import { KeyInfoClause, KeyInfoX509Data, KeyValue, SPKIData } from "./key_infos";
 import { XmlSignature } from "./xml_names";

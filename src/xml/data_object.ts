@@ -1,4 +1,4 @@
-import { XmlAttribute, XmlElement } from "xml-core";
+import { XmlAttribute, XmlElement } from "@inqool/xml-core";
 
 import { XmlSignature } from "./xml_names";
 import { XmlSignatureCollection, XmlSignatureObject } from "./xml_object";

@@ -1,5 +1,5 @@
 {
-  "name": "xmldsigjs",
+  "name": "@inqool/xmldsigjs",
   "version": "2.0.22",
   "description": "XMLDSIGjs provides an implementation of XMLDSIG in Typescript/Javascript based on WebCrypto ",
   "main": "dist/index.js",
@@ -11,7 +11,7 @@
     "pretest": "npm run build:map",
     "test": "mocha test/scripts",
     "test:local": "nyc --reporter=lcov npm test",
-    "build": "npm run build:lib && npm run build:es5 && npm run build:web",
+    "build": "npm run build:lib && npm run build:es5",
     "build:es5": "rollup -c",
     "build:lib": "rollup -c rollup.config.lib.js",
     "build:map": "rollup -c --dev",
@@ -42,15 +42,17 @@
   },
   "homepage": "https://github.com/PeculiarVentures/xadesjs#readme",
   "dependencies": {
+    "@inqool/xml-core": "^1.1.1",
     "asn1js": "^2.0.21",
+    "jsdom": "^13.0.0",
     "pkijs": "~2.1.66",
     "pvutils": "^1.0.16",
-    "tslib": "^1.9.3",
-    "xml-core": "^1.0.15"
+    "tslib": "^1.9.3"
   },
   "devDependencies": {
     "@types/asn1js": "latest",
     "@types/node": "^10.5.4",
+    "@types/xmldom": "^0.1.29",
     "babel-cli": "^6.26.0",
     "babel-core": "^6.26.3",
     "babel-plugin-external-helpers": "^6.22.0",
@@ -64,6 +66,8 @@
     "rollup": "^0.63.4",
     "rollup-plugin-node-resolve": "^3.3.0",
     "rollup-plugin-typescript": "^0.8.1",
-    "typescript": "^2.9.2"
+    "typescript": "^2.9.2",
+    "xmldom": "^0.1.27",
+    "xpath-ts": "1.2.1"
   }
 }

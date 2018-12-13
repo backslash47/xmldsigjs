@@ -1,5 +1,5 @@
-import { XE, XmlError } from "xml-core";
-import * as XmlCore from "xml-core";
+import { XE, XmlError } from "@inqool/xml-core";
+import * as XmlCore from "@inqool/xml-core";
 
 import { IHashAlgorithm, ISignatureAlgorithm } from "./algorithm";
 import { PssAlgorithmParams } from "./xml/key_infos";

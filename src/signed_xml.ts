@@ -1,5 +1,5 @@
-import * as XmlCore from "xml-core";
-import { XmlNodeType } from "xml-core";
+import * as XmlCore from "@inqool/xml-core";
+import { XmlNodeType } from "@inqool/xml-core";
 
 import { ISignatureAlgorithm } from "./algorithm";
 import * as Alg from "./algorithm/index";
@@ -99,8 +99,8 @@ export class SignedXml implements XmlCore.IXmlSerializable {
             this.document = node as Document;
         } else if (node && (node as Node).nodeType === XmlCore.XmlNodeType.Element) {
             // constructor(node: Element);
-            const xmlText = new XMLSerializer().serializeToString(node);
-            this.document = new DOMParser().parseFromString(xmlText, XmlCore.APPLICATION_XML);
+            const xmlText = XmlCore.getSerializer().serializeToString(node);
+            this.document = XmlCore.getParser().parseFromString(xmlText, XmlCore.APPLICATION_XML);
         }
     }
 
@@ -219,7 +219,7 @@ export class SignedXml implements XmlCore.IXmlSerializable {
             }
             const sig = node.cloneNode(true);
             doc.appendChild(sig);
-            return new XMLSerializer().serializeToString(doc);
+            return XmlCore.getSerializer().serializeToString(doc);
         }
         return this.XmlSignature.toString();
     }
@@ -361,7 +361,7 @@ export class SignedXml implements XmlCore.IXmlSerializable {
                     // we must not C14N references from outside the document
                     // e.g. non-xml documents
                     if (reference.Uri && reference.Uri[0] !== `#`) {
-                        canonOutput = new XMLSerializer().serializeToString(doc.ownerDocument);
+                        canonOutput = XmlCore.getSerializer().serializeToString(doc.ownerDocument!);
                     } else {
                         // apply default C14N transformation
                         const excC14N = new Transforms.XmlDsigC14NTransform();
