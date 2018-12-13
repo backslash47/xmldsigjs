@@ -1084,6 +1084,10 @@ declare namespace XmlDSigJs {
     export function Parse(xmlString: string): Document;
     export function Stringify(target: Node): string;
 
+    export function getParser(): DOMParser;
+    export function getSerializer(): XMLSerializer;
+    export function getXPathEvaluator(): XPathEvaluator;
+    export function install(parser: DOMParser, serializer: XMLSerializer, xpath: XPathEvaluator): void;
 }
 
 export = XmlDSigJs;
